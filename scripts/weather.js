@@ -4,7 +4,7 @@ const city = 'Warsaw';
 const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
 function updateWeater(){
-    fetch(apiUrl)
+    fetch(apiUrl, {  method: "GET",  mode: "no-cors"})
     .then(response => {
         if (!response.ok) {
         throw new Error('Serwis zwrócił błąd');
