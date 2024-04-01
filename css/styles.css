@@ -1,0 +1,167 @@
+:root {
+    --background-color: rgb(46, 49, 61);
+    --text-color: white;
+    --pink: rgb(243, 140, 200);
+    --menu-color: rgb(255, 255, 255);
+    --purpl: rgb(108, 97, 212);
+    --blu: rgb(90, 150, 211);
+
+  }
+
+
+body {
+    background-color: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+    line-height: 1.4em;
+}
+
+h1 {
+    font-weight: bold;
+    color: var(--pink);
+    font-size: 2rem;
+}
+
+h4 {
+    font-weight: bold;
+    color:var(--blu);
+    font-size: 2rem;
+    padding: 10px;
+}
+
+a {
+    color: var(--text-color); 
+    text-decoration: none;    
+}
+
+a:hover{
+    color: var(--pink)
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: var(--purpl);
+
+    align-items: baseline;
+}
+
+.header-text {
+    text-align: left;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.logo {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-top: 20px;
+    padding-left: 40px;
+
+}
+
+.copy{
+    font-size: 0.8rem;
+}
+
+.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+}
+
+.menu li {
+    padding-inline: 20px; 
+    margin-block: 20px;
+}
+
+.menu li.active  a {
+color: var(--pink);
+}
+
+#weather{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 30px;
+    color: var(--background-color);
+    padding-inline: 10px;
+    margin-inline: 60px;
+    margin-block: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.6rem;
+}
+/* +większa icona, odstępy */
+.weather-icon{
+    size: 100px;
+    
+}
+
+.img-center {
+    margin: 0 auto;
+    display: block;
+}
+
+.kot{
+    border-radius: 50% ;
+    width: 50rem;
+    padding: 30px;
+    align-items: center;
+
+}
+
+.photos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+    padding: 30px;
+    
+}
+
+.roblox{
+    border-radius: 70px;
+    width: 50rem;
+    padding: 30px;
+    /* margin-left: 50px; */
+
+}
+.minecraft{
+    border-radius: 70px;
+    width: 50rem;
+    padding: 30px;
+    /* margin-left: 320px; */
+    /* margin-right: 40px; */
+}
+
+.rolki{
+    border-radius: 70px;
+    width: 50rem;
+    padding: 30px;
+}
+.address{
+    padding: 50px;
+}
+.wrapper{
+    padding: 1em;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    background-color: var(--purpl);
+    padding: 20px;
+
+
+}
