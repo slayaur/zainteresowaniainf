@@ -7,7 +7,7 @@ function updateWeater(){
     fetch(apiUrl, {  method: "GET",  mode: "no-cors"})
     .then(response => {
         if (!response.ok) {
-        throw new Error('Serwis zwrócił błąd');
+        throw new Error('Serwis zwrócił błąd', response);
         }
         return response.json();
     })
@@ -22,9 +22,7 @@ function updateWeater(){
         const conditionTextElements = weatherDiv.getElementsByClassName("condition-text");
         conditionTextElements[0].innerHTML = temperature;       
 
-        // aktualizowanie czasu co sekundę
-        updateTime();
-        setInterval(updateTime, 1000);
+        
 
 
         // Ustawienie ikonki z temperaturą
@@ -41,5 +39,9 @@ function updateTime(){
     const dateElement = document.getElementById("current-time");
     dateElement.innerHTML = (new Date().toLocaleTimeString());
 }
+
+// aktualizowanie czasu co sekundę
+updateTime();
+setInterval(updateTime, 1000);
 
 updateWeater();
