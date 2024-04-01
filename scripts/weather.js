@@ -1,7 +1,7 @@
 const apiKey = '333707842e574ab3911155106240104';
 const city = 'Warsaw'; 
 
-const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
 function updateWeater(){
     fetch(apiUrl)
