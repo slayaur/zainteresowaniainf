@@ -7,7 +7,8 @@ function updateWeater(){
     fetch(apiUrl, {  method: "GET",  mode: "no-cors"})
     .then(response => {
         if (!response.ok) {
-        throw new Error('Serwis zwrócił błąd', response);
+            console.error('Serwis zwrócił błąd', response);
+            throw new Error('Serwis zwrócił błąd');
         }
         return response.json();
     })
