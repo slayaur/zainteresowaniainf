@@ -5,7 +5,7 @@ const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cit
 
 async function updateWeater() {
     try {
-        let response = await fetch(apiUrl, { method: "GET", mode: "no-cors" });
+        let response = await fetch(apiUrl);
         let jason = await response.json();
 
         const weatherDiv = document.getElementById('weather');
